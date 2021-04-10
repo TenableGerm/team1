@@ -5,7 +5,7 @@ onready var path_follow = get_parent()
 signal damage
 
 export var max_health = 10
-export var min_speed = 200
+export var min_speed = 50
 export var max_speed = 400
 var speed = 0
 var health = 0
