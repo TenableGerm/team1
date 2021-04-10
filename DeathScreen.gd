@@ -6,6 +6,8 @@ func _ready():
 	$DeathBackground.hide()
 	$DeathMessage1.hide()
 	$DeathMessage2.hide()
+	$Label.hide()
+	$Label2.hide()
 	$ExitButton.hide()
 
 func game_over():
@@ -13,6 +15,8 @@ func game_over():
 	$DeathMessage1.show()
 	$DeathMessage2.show()
 	$ExitButton.show()
+	$Label.show()
+	$Label2.show()
 	get_parent().get_node("Field").queue_free()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
