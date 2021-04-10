@@ -24,6 +24,7 @@ const TILE_TYPE = 3
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	randomize()
+	
 
 
 func _input(event):
@@ -31,7 +32,7 @@ func _input(event):
 		if event is InputEventMouseButton and event.is_pressed():
 			var mouse = get_viewport().get_mouse_position()
 			var map_cords = $FeaturesTileMap.world_to_map(mouse)
-			print($FeaturesTileMap.get_cellv(map_cords))
+			print(str($Pollution.pollution))
 			if TILE_TYPE == $FeaturesTileMap.get_cellv(map_cords):
 				var tower_type = FireTower
 				var tower_cost
@@ -59,6 +60,8 @@ func _input(event):
 					add_child(tower)
 
 func _on_EnemyButton_pressed():
+	$RoundTimer.start()
+	$EnemyButton.Disappear()
 	new_round()
 	new_enemies(rand_range(1,10))
 	
@@ -69,7 +72,7 @@ func new_round():
 	$RoundLabel.show()
 
 func new_enemies(num):
-	for i in range(num*round_num):
+	for i in range(num*round_num*round_num):
 		var path = Path.instance()
 		add_child(path)
 

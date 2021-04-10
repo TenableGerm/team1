@@ -1,4 +1,5 @@
-extends Node
+extends CanvasLayer
+
 
 # Declare member variables here. Examples:
 # var a = 2
@@ -7,14 +8,18 @@ extends Node
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	$Menu.connect("start",$Field,"_on_start")
-	$Field/Pollution.connect("end_game", $DeathScreen, "game_over")
+	$DeathBackground.hide()
+	$DeathMessage1.hide()
+	$DeathMessage2.hide()
+	$ExitButton.hide()
 
+func end_game():
+	print("Here 2")
+	$DeathBackground.show()
+	$DeathMessage1.show()
+	$DeathMessage2.show()
+	$ExitButton.hide()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
-
-
-func _on_ExitButton_pressed():
-	get_tree().quit()
