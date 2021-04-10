@@ -4,11 +4,7 @@
 [ext_resource path="res://HUD scenes/Shop.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Field/Field.gd" type="Script" id=3]
 [ext_resource path="res://Path2D.tscn" type="PackedScene" id=4]
-<<<<<<< HEAD
-[ext_resource path="res://Field/Pollution.gd" type="Script" id=5]
-=======
 [ext_resource path="res://Tower.tscn" type="PackedScene" id=5]
->>>>>>> 2a67eb5e036cc2d4e89707a670cfec830d6d131d
 
 [node name="Field" type="CanvasLayer"]
 script = ExtResource( 3 )
@@ -33,17 +29,6 @@ margin_left = 558.0
 margin_top = 652.0
 margin_right = 896.0
 margin_bottom = 738.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Pollution" type="Label" parent="."]
-margin_left = 32.0
-margin_top = 652.0
-margin_right = 120.0
-margin_bottom = 748.0
-text = "Pollution: n"
-script = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

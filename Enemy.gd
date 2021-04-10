@@ -9,7 +9,6 @@ export var min_speed = 15
 export var max_speed = 130
 var speed = 0
 
-const FINISH_Y = 647
 
 var move_direction = 0
 
@@ -29,14 +28,9 @@ func MovementLoop(delta):
 	var pos = path_follow.get_global_position()
 	if pos.y > FINISH_Y:
 		FinishLine()
-<<<<<<< HEAD
+
 
 func FinishLine():
 	emit_signal("damage")
 	queue_free()
-=======
->>>>>>> cfb9a4499ae182d16f0ecda76bb803fe830fba56
 
-func FinishLine():
-	emit_signal("damage")
-	queue_free()
