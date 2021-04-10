@@ -32,7 +32,6 @@ func _input(event):
 			var map_cords = $FeaturesTileMap.world_to_map(mouse)
 			print($FeaturesTileMap.get_cellv(map_cords))
 			if TILE_TYPE == $FeaturesTileMap.get_cellv(map_cords):
-			if 3 == $FeaturesTileMap.get_cellv(map_cords):
 				var tower_type = FireTower
 				var tower_cost
 				if $Shop.selected == "Des":
