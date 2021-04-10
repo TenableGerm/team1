@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Field/medTS.tres" type="TileSet" id=1]
 [ext_resource path="res://HUD scenes/Shop.tscn" type="PackedScene" id=2]
@@ -10,32 +10,56 @@
 [ext_resource path="res://Towers/FireTower.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Field/MoneyLabel.gd" type="Script" id=9]
 
-[sub_resource type="DynamicFontData" id=1]
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 1, 0, 0, 1 )
+
+[sub_resource type="DynamicFontData" id=2]
 font_path = "res://Assets/Fonts/Kenney Pixel.ttf"
 
-[sub_resource type="DynamicFont" id=2]
-size = 50
-font_data = SubResource( 1 )
-
-[sub_resource type="StyleBoxFlat" id=3]
-bg_color = Color( 0.592157, 0.376471, 0.0941176, 1 )
+[sub_resource type="DynamicFont" id=3]
+size = 60
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = SubResource( 2 )
 
 [sub_resource type="DynamicFontData" id=4]
 font_path = "res://Assets/Fonts/Kenney Pixel.ttf"
 
 [sub_resource type="DynamicFont" id=5]
-size = 40
+size = 50
 font_data = SubResource( 4 )
 
 [sub_resource type="StyleBoxFlat" id=6]
-bg_color = Color( 0.0470588, 0.333333, 0.00784314, 1 )
+bg_color = Color( 0.592157, 0.376471, 0.0941176, 1 )
 
 [sub_resource type="DynamicFontData" id=7]
-font_path = "res://Assets/Fonts/Kenney Pixel Square.ttf"
+font_path = "res://Assets/Fonts/Kenney Pixel.ttf"
 
 [sub_resource type="DynamicFont" id=8]
-size = 22
+size = 40
 font_data = SubResource( 7 )
+
+[sub_resource type="StyleBoxFlat" id=9]
+bg_color = Color( 0.0470588, 0.333333, 0.00784314, 1 )
+
+[sub_resource type="DynamicFontData" id=10]
+font_path = "res://Assets/Fonts/Kenney Pixel Square.ttf"
+
+[sub_resource type="DynamicFont" id=11]
+size = 22
+font_data = SubResource( 10 )
+
+[sub_resource type="StyleBoxFlat" id=12]
+bg_color = Color( 0, 1, 1, 1 )
+
+[sub_resource type="DynamicFontData" id=13]
+font_path = "res://Assets/Fonts/Kenney Pixel Square.ttf"
+
+[sub_resource type="DynamicFont" id=14]
+size = 40
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = SubResource( 13 )
 
 [node name="Field" type="CanvasLayer"]
 script = ExtResource( 3 )
@@ -58,46 +82,62 @@ wait_time = 3.0
 [node name="Path2D" parent="." instance=ExtResource( 4 )]
 
 [node name="EnemyButton" type="Button" parent="."]
-margin_left = 558.0
-margin_top = 652.0
-margin_right = 896.0
-margin_bottom = 738.0
+margin_left = 550.0
+margin_top = 654.0
+margin_right = 786.0
+margin_bottom = 740.0
+custom_styles/normal = SubResource( 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Next Round"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Pollution" type="Label" parent="."]
-margin_left = 92.0
-margin_top = 680.0
-margin_right = 236.0
-margin_bottom = 728.0
-custom_fonts/font = SubResource( 2 )
+margin_top = 682.0
+margin_right = 144.0
+margin_bottom = 730.0
+custom_fonts/font = SubResource( 5 )
 script = ExtResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="PollutionBar" type="ProgressBar" parent="Pollution"]
-margin_left = 60.0
-margin_right = 312.0
-margin_bottom = 46.0
-custom_styles/bg = SubResource( 3 )
-custom_fonts/font = SubResource( 5 )
+margin_left = 20.0
+margin_top = 30.0
+margin_right = 272.0
+margin_bottom = 76.0
+custom_styles/bg = SubResource( 6 )
+custom_fonts/font = SubResource( 8 )
 script = ExtResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="MoneyLabel" type="Label" parent="."]
-margin_left = 8.0
-margin_top = 680.0
-margin_right = 128.0
-margin_bottom = 720.0
-custom_styles/normal = SubResource( 6 )
-custom_fonts/font = SubResource( 8 )
+margin_left = 20.0
+margin_top = 658.0
+margin_right = 140.0
+margin_bottom = 698.0
+custom_styles/normal = SubResource( 9 )
+custom_fonts/font = SubResource( 11 )
 text = "Cash: "
 script = ExtResource( 9 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="QuitButton" type="Button" parent="."]
+margin_left = 806.0
+margin_top = 668.0
+margin_right = 986.0
+margin_bottom = 734.0
+custom_styles/normal = SubResource( 12 )
+custom_fonts/font = SubResource( 14 )
+text = "Quit"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="pressed" from="EnemyButton" to="." method="_on_EnemyButton_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_QuitButton_pressed"]
