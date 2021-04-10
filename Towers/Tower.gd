@@ -19,13 +19,19 @@ func _ready():
 
 
 func shoot():
-	var b = WaterBullet.instance()
 	#b.volocity = Vector2(1,1)
-	b.rotation_degrees = oriantation
-	oriantation += 90
-	oriantation % 360
-	add_child(b)
-	b.get_node("AnimatedSprite").flip_h = true
+	var enemy = get_tree().get_nodes_in_group("enemy")
+	if enemy.size() > 0:
+		var n = 8
+		for number in range(0,n):
+			var b = WaterBullet.instance()
+			b.rotation_degrees = oriantation
+			oriantation += 360/n
+			oriantation % 360
+			add_child(b)
+			b.get_node("AnimatedSprite").flip_h = true
+	else:
+		pass
 	#b.transform = $Fire.global_transform
 
 
