@@ -24,6 +24,7 @@ const TILE_TYPE = 3
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	randomize()
+	$Pollution.connect("end_game", get_parent().get_node("DeathScreen"), "game_over")
 	
 
 

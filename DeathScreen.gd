@@ -1,11 +1,6 @@
 extends CanvasLayer
 
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$DeathBackground.hide()
@@ -13,12 +8,12 @@ func _ready():
 	$DeathMessage2.hide()
 	$ExitButton.hide()
 
-func end_game():
+func game_over():
 	print("Here 2")
 	$DeathBackground.show()
 	$DeathMessage1.show()
 	$DeathMessage2.show()
-	$ExitButton.hide()
+	$ExitButton.show()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
