@@ -84,8 +84,6 @@ tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 2, 0, 5, 2, 0, 
 [node name="EnemyTimer" type="Timer" parent="."]
 wait_time = 3.0
 
-[node name="Path2D" parent="." instance=ExtResource( 4 )]
-
 [node name="EnemyButton" type="Button" parent="."]
 margin_left = 550.0
 margin_top = 654.0
