@@ -16,10 +16,10 @@ func _on_start():
 	add_child(mob)
 	mob.position = $Path2D/PathFollow2D.position
 	mob.linear_velocity = Vector2(rand_range(mob.min_speed,mob.max_speed),0)
-	mob.rotation = direction
-	
-	
+	mob.linear_velocity = mob.linear_velocity.rotated(direction)
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _process(delta):
+	var mobs = get_children()
+	pass
