@@ -19,7 +19,7 @@ func _physics_process(delta):
 
 func _on_FireBullet_body_entered(body):
 	if body.is_in_group("mobs"):
-		body.queue_free()
+		body._enemy_damage(1)
 	queue_free()
 
 func _on_VisibilityNotifier2D_screen_exited():
