@@ -1,0 +1,34 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Assets/object- layer.png" type="Texture" id=1]
+[ext_resource path="res://Assets/ground_tiles.png" type="Texture" id=2]
+[ext_resource path="res://Assets/trees-and-bushes.png" type="Texture" id=3]
+
+[node name="FancyTileSet" type="Node"]
+
+[node name="Tree" type="Sprite" parent="."]
+position = Vector2( 240, 108 )
+scale = Vector2( 1, 0.833333 )
+texture = ExtResource( 1 )
+region_enabled = true
+region_rect = Rect2( 158, 64, 64, 64 )
+
+[node name="RandomCobble" type="Sprite" parent="."]
+position = Vector2( 336, 352 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 192.918, 257.01, 128, 96 )
+
+[node name="Sprite" type="Sprite" parent="."]
+
+[node name="GoodTree" type="Sprite" parent="."]
+position = Vector2( 144, 81.3333 )
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 116, 128 )
+
+[node name="RoundCobbleStone" type="Sprite" parent="."]
+position = Vector2( 336, 352 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 288, 284, 32, 64 )
