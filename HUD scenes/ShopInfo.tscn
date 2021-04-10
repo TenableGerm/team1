@@ -5,12 +5,17 @@
 [ext_resource path="res://Assets/Tres/Tower_spriteframes.tres" type="SpriteFrames" id=3]
 
 [sub_resource type="DynamicFont" id=1]
+size = 45
 font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=2]
+size = 60
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=3]
+size = 45
 font_data = ExtResource( 2 )
 
 [node name="ShopInfo" type="CanvasLayer"]
@@ -21,10 +26,10 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-margin_left = -214.48
-margin_top = 4.6944
-margin_right = -4.48022
-margin_bottom = 128.694
+margin_left = -224.004
+margin_top = 63.4282
+margin_right = -14.0046
+margin_bottom = 187.428
 custom_fonts/font = SubResource( 1 )
 autowrap = true
 uppercase = true
@@ -37,10 +42,10 @@ anchor_left = 0.998
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-margin_left = -200.729
-margin_top = -25.587
-margin_right = -11.7776
-margin_bottom = 0.413025
+margin_left = -174.952
+margin_top = -43.0
+margin_right = -8.0
+margin_bottom = 3.0
 custom_fonts/font = SubResource( 2 )
 align = 1
 autowrap = true
@@ -53,10 +58,10 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-margin_left = -203.48
-margin_top = 121.635
-margin_right = -2.48022
-margin_bottom = 156.635
+margin_left = -262.214
+margin_top = 197.83
+margin_right = -61.2141
+margin_bottom = 232.83
 custom_fonts/font = SubResource( 3 )
 align = 1
 autowrap = true
@@ -65,7 +70,7 @@ __meta__ = {
 }
 
 [node name="Tower" type="AnimatedSprite" parent="."]
-position = Vector2( 796, 496.26 )
-scale = Vector2( 4.22855, 4.22855 )
+position = Vector2( 773.776, 380.38 )
+scale = Vector2( 3.4, 3.4 )
 frames = ExtResource( 3 )
 animation = "PlaceHold"

@@ -44,7 +44,7 @@ anchor_right = 1.0
 anchor_bottom = 0.842
 margin_left = 2.36798
 margin_bottom = -9.65601
-color = Color( 0.388235, 0.388235, 0.388235, 1 )
+color = Color( 0.329412, 0.12549, 0.12549, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

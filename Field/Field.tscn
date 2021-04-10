@@ -73,6 +73,14 @@ AirTower = ExtResource( 11 )
 EarthTower = ExtResource( 10 )
 LightningTower = ExtResource( 12 )
 
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.34902, 0.870588, 0.407843, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Shop" parent="." instance=ExtResource( 2 )]
 
 [node name="TileMap" type="TileMap" parent="."]
