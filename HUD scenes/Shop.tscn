@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://HUD scenes/ShopInfo.tscn" type="PackedScene" id=1]
 [ext_resource path="res://HUD scenes/Shop.gd" type="Script" id=2]
@@ -19,20 +19,18 @@ outline_color = Color( 0, 0, 0, 1 )
 font_data = SubResource( 1 )
 
 [sub_resource type="StyleBoxFlat" id=3]
-bg_color = Color( 0.0470588, 0.235294, 0.960784, 1 )
+bg_color = Color( 0.996078, 0.0823529, 0.0117647, 1 )
 
 [sub_resource type="DynamicFont" id=4]
 font_data = ExtResource( 3 )
 
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.921569, 1, 0, 1 )
+
 [sub_resource type="StyleBoxFlat" id=6]
-bg_color = Color( 0.321569, 0.180392, 0.180392, 1 )
+bg_color = Color( 0.533333, 0.243137, 0.243137, 1 )
 
-[sub_resource type="StyleBoxFlat" id=8]
-bg_color = Color( 0.972549, 0.976471, 0.141176, 1 )
-
-[sub_resource type="StyleBoxFlat" id=10]
-
-[sub_resource type="StyleBoxFlat" id=12]
+[sub_resource type="StyleBoxFlat" id=7]
 bg_color = Color( 1, 0, 0, 1 )
 
 [node name="Shop" type="CanvasLayer"]
@@ -42,9 +40,8 @@ script = ExtResource( 2 )
 anchor_left = 0.693
 anchor_right = 1.0
 anchor_bottom = 0.842
-margin_left = 0.367981
-margin_top = 3.06999
-margin_bottom = 1.86996
+margin_left = 0.368042
+margin_bottom = -6.65601
 color = Color( 0.388235, 0.388235, 0.388235, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -91,7 +88,7 @@ margin_left = -0.46405
 margin_top = 1.8
 margin_right = -0.240051
 margin_bottom = 0.199997
-custom_styles/normal = SubResource( 6 )
+custom_styles/normal = SubResource( 5 )
 custom_fonts/font = SubResource( 4 )
 icon = ExtResource( 8 )
 expand_icon = true
@@ -108,7 +105,7 @@ margin_left = 0.200745
 margin_top = 1.72894
 margin_right = 0.424744
 margin_bottom = 0.128937
-custom_styles/normal = SubResource( 8 )
+custom_styles/normal = SubResource( 6 )
 custom_fonts/font = SubResource( 4 )
 icon = ExtResource( 7 )
 expand_icon = true
@@ -125,7 +122,6 @@ margin_left = -0.052063
 margin_top = 0.0999908
 margin_right = 0.171936
 margin_bottom = 0.299988
-custom_styles/normal = SubResource( 10 )
 custom_fonts/font = SubResource( 4 )
 icon = ExtResource( 5 )
 expand_icon = true
@@ -141,7 +137,7 @@ anchor_bottom = 0.369
 margin_left = -0.376038
 margin_right = -0.152039
 margin_bottom = -0.400009
-custom_styles/normal = SubResource( 12 )
+custom_styles/normal = SubResource( 7 )
 custom_fonts/font = SubResource( 4 )
 icon = ExtResource( 6 )
 expand_icon = true
