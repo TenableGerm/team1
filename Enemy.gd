@@ -23,10 +23,15 @@ func _ready():
 	connect("damage",get_parent().get_parent().get_parent().get_node("Pollution"),"pollution_up")
 	connect("death", get_parent().get_parent().get_parent().get_node("MoneyLabel"), "cash_up")
 	health = rand_range(5,max_health)
+	$AnimatedSprite.scale.x = health / 10
+	$AnimatedSprite.scale.y = health / 10
 
 
 func _physics_process(delta):
 	MovementLoop(delta)
+	$AnimatedSprite.scale.x = health / 10
+	$AnimatedSprite.scale.y = health / 10
+	
 	
 func _enemy_damage(amount):
 	health = health - amount
