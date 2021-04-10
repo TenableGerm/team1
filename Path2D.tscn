@@ -11,7 +11,7 @@
 
 [sub_resource type="Curve2D" id=1]
 _data = {
-"points": PoolVector2Array( 0, 0, 0, 0, 162.893, 31.891, 0, 0, 0, 0, 162.893, 109.891, 0, 0, 0, 0, 296.893, 99.891, 0, 0, 0, 0, 302.893, 227.891, 0, 0, 0, 0, 418.893, 225.891, 0, 0, 0, 0, 414.893, 359.891, 0, 0, 0, 0, 280.893, 363.891, 0, 0, 0, 0, 298.893, 457.891, 0, 0, 0, 0, 424.893, 455.891, 0, 0, 0, 0, 426.893, 649.891 )
+"points": PoolVector2Array( 0, 0, 0, 0, 162.893, -80.109, 0, 0, 0, 0, 162.893, 109.891, 0, 0, 0, 0, 296.893, 99.891, 0, 0, 0, 0, 302.893, 227.891, 0, 0, 0, 0, 418.893, 225.891, 0, 0, 0, 0, 414.893, 359.891, 0, 0, 0, 0, 280.893, 363.891, 0, 0, 0, 0, 298.893, 457.891, 0, 0, 0, 0, 424.893, 455.891, 0, 0, 0, 0, 426.893, 649.891 )
 }
 
 [sub_resource type="SpriteFrames" id=2]
@@ -29,8 +29,8 @@ extents = Vector2( 12.7401, 12.9755 )
 curve = SubResource( 1 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="."]
-position = Vector2( 162.893, 31.891 )
-rotation = 1.57079
+position = Vector2( 162.893, -80.109 )
+rotation = 1.5708
 loop = false
 script = ExtResource( 3 )
 Enemy = ExtResource( 1 )
@@ -41,10 +41,11 @@ Enemy = ExtResource( 1 )
 collision_mask = 0
 gravity_scale = 0.0
 script = ExtResource( 2 )
+max_health = 20
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="PathFollow2D/Enemy"]
 frames = SubResource( 2 )
-frame = 3
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PathFollow2D/Enemy"]
