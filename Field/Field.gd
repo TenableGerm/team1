@@ -27,8 +27,8 @@ func _input(event):
 	if started :
 		if event is InputEventMouseButton and event.is_pressed():
 			var mouse = get_viewport().get_mouse_position()
-			var map_cords = $TileMap.world_to_map(mouse)
-			if 0 == $TileMap.get_cellv(map_cords):
+			var map_cords = $FeaturesTileMap.world_to_map(mouse)
+			if 0 == $FeaturesTileMap.get_cellv(map_cords):
 				var tower_type = FireTower
 				var tower_cost
 				if $Shop.selected == "Des":
