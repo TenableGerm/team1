@@ -1,10 +1,18 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Field/medTS.tres" type="TileSet" id=1]
 [ext_resource path="res://HUD scenes/Shop.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Field/Field.gd" type="Script" id=3]
 [ext_resource path="res://Path2D.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Tower.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Field/Pollution.gd" type="Script" id=6]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://Assets/Fonts/Kenney Pixel.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 50
+font_data = SubResource( 1 )
 
 [node name="Field" type="CanvasLayer"]
 script = ExtResource( 3 )
@@ -29,6 +37,18 @@ margin_left = 558.0
 margin_top = 652.0
 margin_right = 896.0
 margin_bottom = 738.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Pollution" type="Label" parent="."]
+margin_left = 92.0
+margin_top = 680.0
+margin_right = 236.0
+margin_bottom = 728.0
+custom_fonts/font = SubResource( 2 )
+text = "Status"
+script = ExtResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
