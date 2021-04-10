@@ -12,16 +12,16 @@ format = 1
 position = Vector2( 512, 512 )
 texture = ExtResource( 1 )
 region_enabled = true
-region_rect = Rect2( 200, 200, 16, 16 )
+region_rect = Rect2( 200, 200, 32, 32 )
 
 [node name="Gate" type="Sprite" parent="GameTiles"]
 position = Vector2( 704, 384 )
 texture = ExtResource( 2 )
 region_enabled = true
-region_rect = Rect2( 1164, 390, 16, 16 )
+region_rect = Rect2( 1167, 400, 32, 32 )
 
 [node name="Trail" type="Sprite" parent="GameTiles"]
 position = Vector2( 112, 80 )
 texture = ExtResource( 2 )
 region_enabled = true
-region_rect = Rect2( 1100, 512, 16, 16 )
+region_rect = Rect2( 1100, 512, 32, 32 )
