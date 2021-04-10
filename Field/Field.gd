@@ -34,17 +34,10 @@ func _input(event):
 
 
 func _on_EnemyButton_pressed():
-	new_enemies(rand_range(10,50))
+	var path = Path.instance()
+	add_child(path)
 
-func new_enemies(num):
-	for i in range(num):
-		var path = Path.instance()
-		add_child(path) 
 
 func _on_Menu_start():
 	started = true
 	pass # Replace with function body.
-
-
-func _on_QuitButton_pressed():
-	get_tree().quit()
