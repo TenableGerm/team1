@@ -1,2 +1,2 @@
-# Team Advanced Machine Learning Workshop
+Group 1
 Digital Women Code Camp
