@@ -1,18 +1,13 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Field/medTS.tres" type="TileSet" id=1]
 [ext_resource path="res://HUD scenes/Shop.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Field/Field.gd" type="Script" id=3]
-[ext_resource path="res://Enemy.tscn" type="PackedScene" id=4]
-
-[sub_resource type="Curve2D" id=1]
-_data = {
-"points": PoolVector2Array( 0, 0, 0, 0, 162.893, 31.891, 0, 0, 0, 0, 162.893, 109.891, 0, 0, 0, 0, 296.893, 99.891, 0, 0, 0, 0, 302.893, 227.891, 0, 0, 0, 0, 418.893, 225.891, 0, 0, 0, 0, 414.893, 359.891, 0, 0, 0, 0, 280.893, 363.891, 0, 0, 0, 0, 298.893, 457.891, 0, 0, 0, 0, 424.893, 455.891, 0, 0, 0, 0, 426.893, 649.891 )
-}
+[ext_resource path="res://Path2D.tscn" type="PackedScene" id=4]
 
 [node name="Field" type="CanvasLayer"]
 script = ExtResource( 3 )
-Enemy = ExtResource( 4 )
+Path = ExtResource( 4 )
 
 [node name="Shop" parent="." instance=ExtResource( 2 )]
 
@@ -25,9 +20,14 @@ tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 2, 0, 5, 2, 0, 
 [node name="EnemyTimer" type="Timer" parent="."]
 wait_time = 3.0
 
-[node name="Path2D" type="Path2D" parent="."]
-curve = SubResource( 1 )
+[node name="Path2D" parent="." instance=ExtResource( 4 )]
 
-[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
-position = Vector2( 162.893, 31.891 )
-rotation = 1.57079
+[node name="EnemyButton" type="Button" parent="."]
+margin_left = 558.0
+margin_top = 652.0
+margin_right = 896.0
+margin_bottom = 738.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="EnemyButton" to="." method="_on_EnemyButton_pressed"]
