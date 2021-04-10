@@ -38,14 +38,14 @@ func _on_Tower3_pressed():
 
 
 func _on_Tower4_pressed():
-	$ShopInfo/Name.text = "Tower4 name"
+	$ShopInfo/Name.text = "Air Tower"
 	$ShopInfo/Description.text = "Tower4 description"
 	$ShopInfo/Cost.text = "Tower4 cost"
 	$ShopInfo/Tower.play("Grey")
 
 
 func _on_Tower5_pressed():
-	$ShopInfo/Name.text = "Tower5 name"
+	$ShopInfo/Name.text = "Fire Tower"
 	$ShopInfo/Description.text = "Tower5 description"
 	$ShopInfo/Cost.text = "Tower5 cost"
 	$ShopInfo/Tower.play("Red")

@@ -24,15 +24,15 @@ bg_color = Color( 0.0470588, 0.235294, 0.960784, 1 )
 [sub_resource type="DynamicFont" id=4]
 font_data = ExtResource( 3 )
 
-[sub_resource type="StyleBoxFlat" id=6]
+[sub_resource type="StyleBoxFlat" id=5]
 bg_color = Color( 0.321569, 0.180392, 0.180392, 1 )
 
-[sub_resource type="StyleBoxFlat" id=8]
+[sub_resource type="StyleBoxFlat" id=6]
 bg_color = Color( 0.972549, 0.976471, 0.141176, 1 )
 
-[sub_resource type="StyleBoxFlat" id=10]
+[sub_resource type="StyleBoxFlat" id=7]
 
-[sub_resource type="StyleBoxFlat" id=12]
+[sub_resource type="StyleBoxFlat" id=8]
 bg_color = Color( 1, 0, 0, 1 )
 
 [node name="Shop" type="CanvasLayer"]
@@ -42,9 +42,10 @@ script = ExtResource( 2 )
 anchor_left = 0.693
 anchor_right = 1.0
 anchor_bottom = 0.842
-margin_left = 0.367981
-margin_top = 3.06999
-margin_bottom = 1.86996
+margin_left = 1.36798
+margin_top = 3.0
+margin_right = -1.0
+margin_bottom = 1.34399
 color = Color( 0.388235, 0.388235, 0.388235, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -53,9 +54,10 @@ __meta__ = {
 [node name="ShopName" type="RichTextLabel" parent="ShopBoxRect"]
 anchor_right = 1.0
 anchor_bottom = 0.123
-margin_left = 25.8252
-margin_right = -28.1748
-margin_bottom = 0.00800323
+margin_left = 24.0
+margin_top = 28.0
+margin_right = -26.0
+margin_bottom = 20.665
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_fonts/normal_font = SubResource( 2 )
@@ -70,10 +72,10 @@ anchor_left = 0.733
 anchor_top = 0.121
 anchor_right = 0.809
 anchor_bottom = 0.244
-margin_left = -0.0783691
-margin_top = -0.221924
-margin_right = 0.0976563
-margin_bottom = -0.0219269
+margin_left = -11.0783
+margin_top = 11.1221
+margin_right = -8.90234
+margin_bottom = -3.34192
 custom_styles/normal = SubResource( 3 )
 custom_fonts/font = SubResource( 4 )
 icon = ExtResource( 4 )
@@ -87,11 +89,11 @@ anchor_left = 0.811
 anchor_top = 0.117
 anchor_right = 0.885
 anchor_bottom = 0.243
-margin_left = -0.46405
-margin_top = 1.8
-margin_right = -0.240051
-margin_bottom = 0.199997
-custom_styles/normal = SubResource( 6 )
+margin_left = -2.46399
+margin_top = 14.144
+margin_right = 1.76001
+margin_bottom = -2.62399
+custom_styles/normal = SubResource( 5 )
 custom_fonts/font = SubResource( 4 )
 icon = ExtResource( 8 )
 expand_icon = true
@@ -104,11 +106,11 @@ anchor_left = 0.887
 anchor_top = 0.117
 anchor_right = 0.961
 anchor_bottom = 0.243
-margin_left = 0.200745
-margin_top = 1.72894
-margin_right = 0.424744
-margin_bottom = 0.128937
-custom_styles/normal = SubResource( 8 )
+margin_left = 7.71198
+margin_top = 14.144
+margin_right = 11.936
+margin_bottom = -1.62399
+custom_styles/normal = SubResource( 6 )
 custom_fonts/font = SubResource( 4 )
 icon = ExtResource( 7 )
 expand_icon = true
@@ -121,11 +123,11 @@ anchor_left = 0.773
 anchor_top = 0.244
 anchor_right = 0.847
 anchor_bottom = 0.367
-margin_left = -0.052063
-margin_top = 0.0999908
-margin_right = 0.171936
-margin_bottom = 0.299988
-custom_styles/normal = SubResource( 10 )
+margin_left = -11.552
+margin_top = 4.608
+margin_right = -7.328
+margin_bottom = -9.85602
+custom_styles/normal = SubResource( 7 )
 custom_fonts/font = SubResource( 4 )
 icon = ExtResource( 5 )
 expand_icon = true
@@ -138,10 +140,11 @@ anchor_left = 0.849
 anchor_top = 0.245
 anchor_right = 0.923
 anchor_bottom = 0.369
-margin_left = -0.376038
-margin_right = -0.152039
-margin_bottom = -0.400009
-custom_styles/normal = SubResource( 12 )
+margin_left = 6.62402
+margin_top = 3.99997
+margin_right = 10.848
+margin_bottom = -11.232
+custom_styles/normal = SubResource( 8 )
 custom_fonts/font = SubResource( 4 )
 icon = ExtResource( 6 )
 expand_icon = true
