@@ -15,7 +15,7 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 15.6328, 15.9459 )
+extents = Vector2( 32.6612, 22.2526 )
 
 [node name="FireBullet" instance=ExtResource( 1 )]
 script = ExtResource( 5 )
@@ -24,7 +24,6 @@ script = ExtResource( 5 )
 rotation = 1.5708
 scale = Vector2( 1.5, 2 )
 frames = SubResource( 1 )
-frame = 1
 
 [node name="CollisionShape2D" parent="." index="1"]
 position = Vector2( 0.276806, -0.349105 )

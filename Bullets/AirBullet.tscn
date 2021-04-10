@@ -1,5 +1,43 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Bullets/WaterBullet.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Bullets/AirBullet.gd" type="Script" id=2]
+[ext_resource path="res://Bullets/AirBullet/AirBullet0.png" type="Texture" id=3]
+[ext_resource path="res://Bullets/AirBullet/AirBullet3.png" type="Texture" id=4]
+[ext_resource path="res://Bullets/AirBullet/AirBullet2.png" type="Texture" id=5]
+[ext_resource path="res://Bullets/AirBullet/AirBullet1.png" type="Texture" id=6]
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 11.7127
+height = 6.62338
 
 [node name="AirBullet" instance=ExtResource( 1 )]
+position = Vector2( 2.52554, 1.68369 )
+script = ExtResource( 2 )
+speed = 500
+
+[node name="AnimatedSprite" parent="." index="0"]
+rotation = 1.5708
+frames = SubResource( 2 )
+frame = 1
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2( 4.77043, -2.52553 )
+rotation = 1.5708
+shape = SubResource( 1 )
+
+[node name="VisibilityNotifier2D" parent="." index="2"]
+position = Vector2( 5.05109, -2.80616 )
+
+[node name="Timer" type="Timer" parent="." index="3"]
+wait_time = 0.15
+[connection signal="body_entered" from="." to="." method="_on_AirBullet_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

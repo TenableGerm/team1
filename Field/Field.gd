@@ -4,6 +4,7 @@ export (PackedScene) var Path
 export (PackedScene) var Tower  
 
 export (PackedScene) var FireTower 
+export (PackedScene) var AirTower 
 
 
 const grid_width =22
@@ -26,9 +27,10 @@ func _input(event):
 					tower_type = FireTower
 				if $Shop.selected == "Blue":
 					tower_type = Tower
+				if $Shop.selected == "Grey":
+					tower_type = AirTower
 				
 				var tower = tower_type.instance()
-				tower.get_node("TowerAnim").play($Shop.selected)
 				tower.position = mouse
 				add_child(tower)
 
