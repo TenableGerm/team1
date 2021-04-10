@@ -13,8 +13,8 @@ const grid_hight =20
 var started = false
 var round_num = 0
 
-var FIRE_COST = 150.0
-var WATER_COST = 105.0
+var FIRE_COST = 140.0
+var WATER_COST = 101.0
 var LIGHTNING_COST = 75.0
 var EARTH_COST = 60.0
 var AIR_COST = 55.0
@@ -88,7 +88,7 @@ func _on_Menu_start():
 	pass # Replace with function body.
 
 func money_up():
-	var interest = 1.20
+	var interest = 1.125
 	FIRE_COST = round(FIRE_COST * interest)
 	WATER_COST = round(WATER_COST *interest)
 	LIGHTNING_COST = round(LIGHTNING_COST *interest)

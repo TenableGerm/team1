@@ -62,22 +62,22 @@ outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
 font_data = SubResource( 11 )
 
+[sub_resource type="DynamicFontData" id=13]
+font_path = "res://Assets/Fonts/Kenney Pixel.ttf"
+
+[sub_resource type="DynamicFont" id=14]
+size = 50
+font_data = SubResource( 13 )
+
+[sub_resource type="StyleBoxFlat" id=15]
+bg_color = Color( 0.592157, 0.376471, 0.0941176, 1 )
+
 [sub_resource type="DynamicFontData" id=16]
 font_path = "res://Assets/Fonts/Kenney Pixel.ttf"
 
 [sub_resource type="DynamicFont" id=17]
-size = 50
-font_data = SubResource( 16 )
-
-[sub_resource type="StyleBoxFlat" id=13]
-bg_color = Color( 0.592157, 0.376471, 0.0941176, 1 )
-
-[sub_resource type="DynamicFontData" id=14]
-font_path = "res://Assets/Fonts/Kenney Pixel.ttf"
-
-[sub_resource type="DynamicFont" id=15]
 size = 40
-font_data = SubResource( 14 )
+font_data = SubResource( 16 )
 
 [sub_resource type="DynamicFont" id=18]
 size = 40
@@ -182,7 +182,7 @@ margin_left = 16.478
 margin_top = 711.966
 margin_right = 168.478
 margin_bottom = 759.966
-custom_fonts/font = SubResource( 17 )
+custom_fonts/font = SubResource( 14 )
 text = "Pollution:"
 align = 1
 script = ExtResource( 6 )
@@ -195,8 +195,8 @@ margin_left = 159.522
 margin_top = 0.0338135
 margin_right = 499.522
 margin_bottom = 46.0338
-custom_styles/bg = SubResource( 13 )
-custom_fonts/font = SubResource( 15 )
+custom_styles/bg = SubResource( 15 )
+custom_fonts/font = SubResource( 17 )
 script = ExtResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false

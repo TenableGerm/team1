@@ -18,7 +18,7 @@ func _physics_process(delta):
 
 
 func _on_WaterBullet_body_entered(body):
-	body._enemy_damage(2)
+	body._enemy_damage(3)
 	queue_free()
 
 func _on_VisibilityNotifier2D_screen_exited():
