@@ -7,7 +7,7 @@ signal death
 
 export var max_health = 10
 export var min_speed = 50
-export var max_speed = 450
+export var max_speed = 600
 var speed = 0
 var health = 0
 
