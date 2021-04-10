@@ -23,6 +23,9 @@ func _ready():
 func _physics_process(delta):
 	MovementLoop(delta)
 	
+func _enemy_damage(amount):
+	queue_free()
+
 func MovementLoop(delta):
 	var prepos = path_follow.get_global_position()
 	path_follow.set_offset(path_follow.get_offset() + speed * delta)
