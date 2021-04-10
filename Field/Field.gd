@@ -24,7 +24,7 @@ func _input(event):
 		var tower = Tower.instance()
 		tower.get_node("TowerAnim").play($Shop.selected)
 		tower.position = mouse
-		tower.get_node("Fire").position = mouse
+		#tower.get_node("Fire").position = mouse
 		add_child(tower)
 		
 func _on_EnemyButton_pressed():

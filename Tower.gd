@@ -8,19 +8,22 @@ export (PackedScene) var WaterBullet
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
+	$Timer.start()
 
 
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	#shoot()
-	pass
+#func _process(delta):
 
 
 
 func shoot():
 	var b = WaterBullet.instance()
-	owner.add_child(b)
-	b.transform = $Muzzle.global_transform
+	add_child(b)
+	b.get_node("AnimatedSprite").flip_h = true
+	#b.transform = $Fire.global_transform
+
+
+func _on_Timer_timeout():
+	shoot() # Replace with function body.
