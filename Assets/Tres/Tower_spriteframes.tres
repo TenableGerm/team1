@@ -13,14 +13,19 @@ animations = [ {
 "name": "PlaceHold",
 "speed": 5.0
 }, {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "Grey",
+"speed": 4.0
+}, {
 "frames": [ ExtResource( 1 ) ],
 "loop": true,
 "name": "Blue",
 "speed": 4.0
 }, {
-"frames": [ ExtResource( 2 ) ],
+"frames": [ ExtResource( 4 ) ],
 "loop": true,
-"name": "Grey",
+"name": "Yellow",
 "speed": 4.0
 }, {
 "frames": [ ExtResource( 5 ) ],
@@ -31,10 +36,5 @@ animations = [ {
 "frames": [ ExtResource( 3 ) ],
 "loop": true,
 "name": "Red",
-"speed": 4.0
-}, {
-"frames": [ ExtResource( 4 ) ],
-"loop": true,
-"name": "Yellow",
 "speed": 4.0
 } ]
