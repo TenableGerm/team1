@@ -1,11 +1,30 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://HUD scenes/ShopInfo.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Fonts/Kenney Pixel.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Assets/Tres/Tower_spriteframes.tres" type="SpriteFrames" id=3]
+[ext_resource path="res://Bullets/WaterBullet/WaterBullet1.png" type="Texture" id=4]
+[ext_resource path="res://Bullets/FireBullet/FireBullet1.png" type="Texture" id=5]
+[ext_resource path="res://Bullets/AirBullet/AirBullet2.png" type="Texture" id=6]
+[ext_resource path="res://Bullets/FireBullet/FireBullet2.png" type="Texture" id=7]
+[ext_resource path="res://Bullets/FireBullet/FireBullet0.png" type="Texture" id=8]
+[ext_resource path="res://Bullets/WaterBullet/WaterBullet0.png" type="Texture" id=9]
+[ext_resource path="res://Bullets/AirBullet/AirBullet0.png" type="Texture" id=10]
+[ext_resource path="res://Bullets/AirBullet/AirBullet3.png" type="Texture" id=11]
+[ext_resource path="res://Bullets/AirBullet/AirBullet1.png" type="Texture" id=12]
+[ext_resource path="res://Bullets/EarthBullet/EarthBullet2.png" type="Texture" id=13]
+[ext_resource path="res://Bullets/EarthBullet/EarthBullet1.png" type="Texture" id=14]
+[ext_resource path="res://Bullets/EarthBullet/EarthBullet0.png" type="Texture" id=15]
+[ext_resource path="res://Bullets/EarthBullet/EarthBullet3.png" type="Texture" id=16]
+[ext_resource path="res://Bullets/LightningBullet/LightningBullet4.png" type="Texture" id=17]
+[ext_resource path="res://Bullets/LightningBullet/LightningBullet5.png" type="Texture" id=18]
+[ext_resource path="res://Bullets/LightningBullet/LightningBullet3.png" type="Texture" id=19]
+[ext_resource path="res://Bullets/LightningBullet/LightningBullet2.png" type="Texture" id=20]
+[ext_resource path="res://Bullets/LightningBullet/LightningBullet0.png" type="Texture" id=21]
+[ext_resource path="res://Bullets/LightningBullet/LightningBullet1.png" type="Texture" id=22]
 
 [sub_resource type="DynamicFont" id=1]
-size = 45
+size = 30
 font_data = ExtResource( 2 )
 
 [sub_resource type="DynamicFont" id=2]
@@ -17,6 +36,39 @@ font_data = ExtResource( 2 )
 [sub_resource type="DynamicFont" id=3]
 size = 45
 font_data = ExtResource( 2 )
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 8 ), ExtResource( 5 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "Fire",
+"speed": 5.0
+}, {
+"frames": [  ],
+"loop": true,
+"name": "PlaceHold",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 15 ), ExtResource( 14 ), ExtResource( 13 ), ExtResource( 16 ) ],
+"loop": true,
+"name": "Earth",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 21 ), ExtResource( 22 ), ExtResource( 20 ), ExtResource( 19 ), ExtResource( 17 ), ExtResource( 18 ) ],
+"loop": true,
+"name": "Lightning",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ), ExtResource( 12 ), ExtResource( 6 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "Air",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 9 ), ExtResource( 4 ) ],
+"loop": true,
+"name": "Water",
+"speed": 5.0
+} ]
 
 [node name="ShopInfo" type="CanvasLayer"]
 script = ExtResource( 1 )
@@ -70,7 +122,13 @@ __meta__ = {
 }
 
 [node name="Tower" type="AnimatedSprite" parent="."]
-position = Vector2( 773.776, 380.38 )
-scale = Vector2( 3.4, 3.4 )
+position = Vector2( 773.237, 397.841 )
+scale = Vector2( 2.30866, 2.30866 )
 frames = ExtResource( 3 )
+animation = "PlaceHold"
+
+[node name="Bullet" type="AnimatedSprite" parent="."]
+position = Vector2( 835.209, 405.778 )
+scale = Vector2( 1.51496, 1.51496 )
+frames = SubResource( 4 )
 animation = "PlaceHold"
