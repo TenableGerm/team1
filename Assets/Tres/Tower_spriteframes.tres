@@ -1,0 +1,40 @@
+[gd_resource type="SpriteFrames" load_steps=6 format=2]
+
+[ext_resource path="res://Assets/Tres/BlueTower.tres" type="Texture" id=1]
+[ext_resource path="res://Assets/Tres/GreyTower.tres" type="Texture" id=2]
+[ext_resource path="res://Assets/Tres/RedTower.tres" type="Texture" id=3]
+[ext_resource path="res://Assets/Tres/YellowTower.tres" type="Texture" id=4]
+[ext_resource path="res://Assets/Tres/BrownTower.tres" type="Texture" id=5]
+
+[resource]
+animations = [ {
+"frames": [  ],
+"loop": true,
+"name": "PlaceHold",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 1 ) ],
+"loop": true,
+"name": "Blue",
+"speed": 4.0
+}, {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "Grey",
+"speed": 4.0
+}, {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "Brown",
+"speed": 4.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "Red",
+"speed": 4.0
+}, {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "Yellow",
+"speed": 4.0
+} ]

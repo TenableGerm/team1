@@ -1,34 +1,39 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://HUD scenes/ShopInfo.tscn" type="PackedScene" id=1]
 [ext_resource path="res://HUD scenes/Shop.gd" type="Script" id=2]
 [ext_resource path="res://Assets/Fonts/Kenney Pixel.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Assets/Tres/BlueTower.tres" type="Texture" id=4]
+[ext_resource path="res://Assets/Tres/GreyTower.tres" type="Texture" id=5]
+[ext_resource path="res://Assets/Tres/RedTower.tres" type="Texture" id=6]
+[ext_resource path="res://Assets/Tres/YellowTower.tres" type="Texture" id=7]
+[ext_resource path="res://Assets/Tres/BrownTower.tres" type="Texture" id=8]
 
-[sub_resource type="DynamicFontData" id=9]
+[sub_resource type="DynamicFontData" id=1]
 font_path = "res://Assets/Fonts/Kenney Pixel.ttf"
 
-[sub_resource type="DynamicFont" id=10]
+[sub_resource type="DynamicFont" id=2]
 size = 60
 outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
-font_data = SubResource( 9 )
+font_data = SubResource( 1 )
 
 [sub_resource type="StyleBoxFlat" id=3]
-bg_color = Color( 0.996078, 0.0823529, 0.0117647, 1 )
+bg_color = Color( 0.0470588, 0.235294, 0.960784, 1 )
 
 [sub_resource type="DynamicFont" id=4]
 font_data = ExtResource( 3 )
 
-[sub_resource type="StyleBoxFlat" id=5]
-bg_color = Color( 0.054902, 0, 1, 1 )
-
 [sub_resource type="StyleBoxFlat" id=6]
-bg_color = Color( 0.921569, 1, 0, 1 )
-
-[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.321569, 0.180392, 0.180392, 1 )
 
 [sub_resource type="StyleBoxFlat" id=8]
-bg_color = Color( 0.533333, 0.243137, 0.243137, 1 )
+bg_color = Color( 0.972549, 0.976471, 0.141176, 1 )
+
+[sub_resource type="StyleBoxFlat" id=10]
+
+[sub_resource type="StyleBoxFlat" id=12]
+bg_color = Color( 1, 0, 0, 1 )
 
 [node name="Shop" type="CanvasLayer"]
 script = ExtResource( 2 )
@@ -38,9 +43,9 @@ anchor_left = 0.693
 anchor_right = 1.0
 anchor_bottom = 0.842
 margin_left = 0.367981
-margin_top = 1.25992
-margin_bottom = 0.0598755
-color = Color( 0.345098, 0.235294, 0.235294, 1 )
+margin_top = 3.06999
+margin_bottom = 1.86996
+color = Color( 0.388235, 0.388235, 0.388235, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -53,83 +58,93 @@ margin_right = -28.1748
 margin_bottom = 0.00800323
 size_flags_horizontal = 3
 size_flags_vertical = 3
-custom_fonts/normal_font = SubResource( 10 )
+custom_fonts/normal_font = SubResource( 2 )
 text = "Element Shop"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Tower1" type="Button" parent="."]
-anchor_left = 0.771
-anchor_top = 0.158
-anchor_right = 0.8
-anchor_bottom = 0.208
-margin_left = -1.39844
-margin_top = 0.0984955
-margin_right = -1.09442
-margin_bottom = 0.0979996
+light_mask = -2147483647
+anchor_left = 0.733
+anchor_top = 0.121
+anchor_right = 0.809
+anchor_bottom = 0.244
+margin_left = -0.0783691
+margin_top = -0.221924
+margin_right = 0.0976563
+margin_bottom = -0.0219269
 custom_styles/normal = SubResource( 3 )
 custom_fonts/font = SubResource( 4 )
+icon = ExtResource( 4 )
+expand_icon = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Tower2" type="Button" parent="."]
-anchor_left = 0.82
-anchor_top = 0.158
-anchor_right = 0.849
-anchor_bottom = 0.208
-margin_left = 0.0129395
-margin_top = 0.0984955
-margin_right = 0.316956
-margin_bottom = 0.0979996
-custom_styles/normal = SubResource( 5 )
+anchor_left = 0.811
+anchor_top = 0.117
+anchor_right = 0.885
+anchor_bottom = 0.243
+margin_left = -0.46405
+margin_top = 1.8
+margin_right = -0.240051
+margin_bottom = 0.199997
+custom_styles/normal = SubResource( 6 )
 custom_fonts/font = SubResource( 4 )
+icon = ExtResource( 8 )
+expand_icon = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Tower3" type="Button" parent="."]
-anchor_left = 0.869
-anchor_top = 0.158
-anchor_right = 0.898
-anchor_bottom = 0.208
-margin_left = -1.75043
-margin_top = 0.0984955
-margin_right = -1.44647
-margin_bottom = 0.0979996
-custom_styles/normal = SubResource( 6 )
+anchor_left = 0.887
+anchor_top = 0.117
+anchor_right = 0.961
+anchor_bottom = 0.243
+margin_left = 0.200745
+margin_top = 1.72894
+margin_right = 0.424744
+margin_bottom = 0.128937
+custom_styles/normal = SubResource( 8 )
 custom_fonts/font = SubResource( 4 )
+icon = ExtResource( 7 )
+expand_icon = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Tower4" type="Button" parent="."]
-anchor_left = 0.791
-anchor_top = 0.241
-anchor_right = 0.82
-anchor_bottom = 0.291
-margin_left = -1.87842
-margin_top = -1.28941
-margin_right = -1.57446
-margin_bottom = -1.28941
-custom_styles/normal = SubResource( 7 )
+anchor_left = 0.773
+anchor_top = 0.244
+anchor_right = 0.847
+anchor_bottom = 0.367
+margin_left = -0.052063
+margin_top = 0.0999908
+margin_right = 0.171936
+margin_bottom = 0.299988
+custom_styles/normal = SubResource( 10 )
 custom_fonts/font = SubResource( 4 )
+icon = ExtResource( 5 )
+expand_icon = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Tower5" type="Button" parent="."]
 anchor_left = 0.849
-anchor_top = 0.241
-anchor_right = 0.879
-anchor_bottom = 0.291
-margin_left = 0.316956
-margin_top = 0.297989
-margin_right = -0.403076
-margin_bottom = 0.297989
-custom_styles/normal = SubResource( 8 )
+anchor_top = 0.245
+anchor_right = 0.923
+anchor_bottom = 0.369
+margin_left = -0.376038
+margin_right = -0.152039
+margin_bottom = -0.400009
+custom_styles/normal = SubResource( 12 )
 custom_fonts/font = SubResource( 4 )
+icon = ExtResource( 6 )
+expand_icon = true
 __meta__ = {
 "_edit_use_anchors_": false
 }

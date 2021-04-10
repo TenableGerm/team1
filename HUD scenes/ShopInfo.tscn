@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://HUD scenes/ShopInfo.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Fonts/Kenney Pixel.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Assets/Tres/Tower_spriteframes.tres" type="SpriteFrames" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 font_data = ExtResource( 2 )
@@ -20,9 +21,10 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-margin_left = -210.0
-margin_top = -60.9405
-margin_bottom = 63.0595
+margin_left = -214.48
+margin_top = 4.6944
+margin_right = -4.48022
+margin_bottom = 128.694
 custom_fonts/font = SubResource( 1 )
 autowrap = true
 uppercase = true
@@ -35,10 +37,10 @@ anchor_left = 0.998
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-margin_left = -196.249
-margin_top = -91.2219
-margin_right = -7.29736
-margin_bottom = -65.2219
+margin_left = -200.729
+margin_top = -25.587
+margin_right = -11.7776
+margin_bottom = 0.413025
 custom_fonts/font = SubResource( 2 )
 align = 1
 autowrap = true
@@ -51,10 +53,10 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-margin_left = -199.0
-margin_top = 56.0
-margin_right = 2.0
-margin_bottom = 91.0
+margin_left = -203.48
+margin_top = 121.635
+margin_right = -2.48022
+margin_bottom = 156.635
 custom_fonts/font = SubResource( 3 )
 align = 1
 autowrap = true
@@ -62,5 +64,8 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 831.678, 352.801 )
+[node name="Tower" type="AnimatedSprite" parent="."]
+position = Vector2( 794.541, 366.779 )
+scale = Vector2( 4.22855, 4.22855 )
+frames = ExtResource( 3 )
+animation = "PlaceHold"
