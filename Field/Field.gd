@@ -16,7 +16,7 @@ var round_num = 0
 const FIRE_COST = 20
 const WATER_COST = 30
 const LIGHTNING_COST = 22
-const EARTH_COST = 36
+const EARTH_COST = 60
 const AIR_COST = 75
 
 const TILE_TYPE = 3
@@ -24,6 +24,7 @@ const TILE_TYPE = 3
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	randomize()
+	$Pollution.connect("end_game", get_parent().get_node("DeathScreen"), "game_over")
 	
 
 

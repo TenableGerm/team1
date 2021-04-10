@@ -8,7 +8,7 @@ func _ready():
 	cash = 100
 	
 func cash_up():
-	cash = cash + 2
+	cash = cash + 1
 	
 func _process(delta):
 	set_text("Cash: " + str(cash))
