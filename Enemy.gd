@@ -30,8 +30,6 @@ func _physics_process(delta):
 	
 func _enemy_damage(amount):
 	health = health - amount
-	#if health <= 0:
-		#Death()
 
 func MovementLoop(delta):
 	var prepos = path_follow.get_global_position()
@@ -48,5 +46,6 @@ func FinishLine():
 
 func Death():
 	health = 0
+	get_parent().get_node("DeathSound").play()
 	emit_signal("death")
 	queue_free()

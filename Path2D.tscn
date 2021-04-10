@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Enemy.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Enemy.gd" type="Script" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Assets/Enemies/BlueEnemy1.png" type="Texture" id=5]
 [ext_resource path="res://Assets/Enemies/BlueEnemy0.png" type="Texture" id=6]
 [ext_resource path="res://Assets/Enemies/BlueEnemy3.png" type="Texture" id=7]
+[ext_resource path="res://Assets/Music/47356__fotoshop__oof.wav" type="AudioStream" id=8]
 
 [sub_resource type="Curve2D" id=1]
 _data = {
@@ -41,7 +42,7 @@ script = ExtResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="PathFollow2D/Enemy"]
 frames = SubResource( 2 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PathFollow2D/Enemy"]
@@ -49,4 +50,7 @@ position = Vector2( -0.210224, 2.94314 )
 shape = SubResource( 3 )
 
 [node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="PathFollow2D/Enemy"]
+
+[node name="DeathSound" type="AudioStreamPlayer" parent="PathFollow2D"]
+stream = ExtResource( 8 )
 [connection signal="screen_exited" from="PathFollow2D/Enemy/VisibilityNotifier2D" to="PathFollow2D/Enemy" method="_on_VisibilityNotifier2D_screen_exited"]
