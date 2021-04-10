@@ -1,8 +1,11 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Field/medTS.tres" type="TileSet" id=1]
+[ext_resource path="res://HUD scenes/Shop.tscn" type="PackedScene" id=2]
 
 [node name="Field" type="Node"]
+
+[node name="Shop" parent="." instance=ExtResource( 2 )]
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 1 )
