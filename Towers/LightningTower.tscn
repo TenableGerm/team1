@@ -12,4 +12,4 @@ LightningBullet = ExtResource( 3 )
 animation = "Yellow"
 
 [node name="Timer" parent="." index="3"]
-wait_time = 0.005
+wait_time = 0.2

@@ -16,7 +16,8 @@ func _on_PlayButton_pressed():
 	$Background.hide()
 	$QuitButton.hide()
 	$PlayButton.hide()
-	$logo.hide()
+	$TopTitle.hide()
+	$BottomTitle.hide()
 	emit_signal("start")
 
 
