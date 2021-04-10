@@ -12,12 +12,9 @@ func _ready():
 
 func Disappear():
 	self.hide()
-	
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
 
-
-func _on_RoundTimer_round_timeout():
+func _on_RoundTimer_timeout():
 	self.show()
-
+	get_parent().get_node("MoneyLabel").cash = get_parent().get_node("MoneyLabel").cash + get_parent().round_num * 10
+	get_parent().money_up();
+	get_parent().get_node("RoundTimer").stop()

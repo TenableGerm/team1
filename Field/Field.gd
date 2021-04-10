@@ -13,11 +13,11 @@ const grid_hight =20
 var started = false
 var round_num = 0
 
-const FIRE_COST = 200
-const WATER_COST = 130
-const LIGHTNING_COST = 90
-const EARTH_COST = 75
-const AIR_COST = 55
+var FIRE_COST = 200.0
+var WATER_COST = 130.0
+var LIGHTNING_COST = 90.0
+var EARTH_COST = 75.0
+var AIR_COST = 55.0
 
 const TILE_TYPE = 3
 
@@ -26,7 +26,6 @@ func _ready():
 	randomize()
 	$Pollution.connect("end_game", get_parent().get_node("DeathScreen"), "game_over")
 	
-
 
 func _input(event):
 	if started :
@@ -64,8 +63,7 @@ func _on_EnemyButton_pressed():
 	$RoundTimer.start()
 	$EnemyButton.Disappear()
 	new_round()
-	new_enemies(rand_range(1,10))
-	
+	new_enemies(rand_range(4,6))
 
 func new_round():
 	round_num = round_num + 1
@@ -77,11 +75,16 @@ func new_enemies(num):
 		var path = Path.instance()
 		add_child(path)
 
-
 func _on_Menu_start():
 	started = true
 	pass # Replace with function body.
 
+func money_up():
+	FIRE_COST = round(FIRE_COST * 1.05)
+	WATER_COST = round(WATER_COST *1.05)
+	LIGHTNING_COST = round(LIGHTNING_COST *1.05)
+	EARTH_COST = round(EARTH_COST *1.05)
+	AIR_COST = round(AIR_COST *1.05)
 
 func _on_QuitButton_pressed():
 	get_tree().quit()

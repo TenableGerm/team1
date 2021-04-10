@@ -196,4 +196,4 @@ one_shot = true
 script = ExtResource( 15 )
 [connection signal="pressed" from="EnemyButton" to="." method="_on_EnemyButton_pressed"]
 [connection signal="pressed" from="QuitButton" to="." method="_on_QuitButton_pressed"]
-[connection signal="round_timeout" from="RoundTimer" to="EnemyButton" method="_on_RoundTimer_round_timeout"]
+[connection signal="timeout" from="RoundTimer" to="EnemyButton" method="_on_RoundTimer_timeout"]
