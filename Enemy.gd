@@ -5,9 +5,9 @@ onready var path_follow = get_parent()
 signal damage
 signal death
 
-export var max_health = 10
-export var min_speed = 50
-export var max_speed = 600
+export var max_health = 100
+export var min_speed = 25
+export var max_speed = 500
 var speed = 0
 var health = 0
 
@@ -22,7 +22,7 @@ func _ready():
 	speed = rand_range(min_speed,max_speed)
 	connect("damage",get_parent().get_parent().get_parent().get_node("Pollution"),"pollution_up")
 	connect("death", get_parent().get_parent().get_parent().get_node("MoneyLabel"), "cash_up")
-	health = max_health
+	health = rand_range(5,max_health)
 
 
 func _physics_process(delta):
