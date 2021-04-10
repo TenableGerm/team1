@@ -6,9 +6,6 @@
 [ext_resource path="res://Bullets/FireBullet/FireBullet0.png" type="Texture" id=4]
 [ext_resource path="res://Bullets/FireBullet.gd" type="Script" id=5]
 
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 32.6612, 22.2526 )
-
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 4 ), ExtResource( 3 ), ExtResource( 2 ) ],
@@ -17,17 +14,20 @@ animations = [ {
 "speed": 5.0
 } ]
 
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 32.6612, 22.2526 )
+
 [node name="FireBullet" instance=ExtResource( 1 )]
 script = ExtResource( 5 )
 
-[node name="CollisionShape2D" parent="." index="0"]
-position = Vector2( 0.276806, -0.349105 )
-shape = SubResource( 2 )
-
-[node name="AnimatedSprite" parent="." index="1"]
+[node name="AnimatedSprite" parent="." index="0"]
 rotation = 1.5708
 scale = Vector2( 1.5, 2 )
 frames = SubResource( 1 )
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2( 0.276806, -0.349105 )
+shape = SubResource( 2 )
 
 [node name="VisibilityNotifier2D" parent="." index="2"]
 position = Vector2( 0.315332, -0.630675 )

@@ -10,3 +10,6 @@ AirBullet = ExtResource( 3 )
 
 [node name="TowerAnim" parent="." index="1"]
 animation = "Grey"
+
+[node name="Timer" parent="." index="3"]
+wait_time = 0.01
