@@ -1,7 +1,7 @@
 extends Area2D
 
-var speed = 750
-
+export var speed = 750
+export var damage = 20
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -17,7 +17,7 @@ func _physics_process(delta):
 	position += transform.x * speed * delta
 
 
-func _on_WaterBullet_body_entered(body):
+func _on_FireBullet_body_entered(body):
 	if body.is_in_group("mobs"):
 		body.queue_free()
 	queue_free()

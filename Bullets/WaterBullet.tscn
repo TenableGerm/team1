@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Bullets/BlueBullet.gd" type="Script" id=1]
+[ext_resource path="res://Bullets/WaterBullet.gd" type="Script" id=1]
 [ext_resource path="res://Bullets/WaterBullet/WaterBullet0.png" type="Texture" id=2]
 [ext_resource path="res://Bullets/WaterBullet/WaterBullet1.png" type="Texture" id=3]
 
@@ -19,7 +19,6 @@ script = ExtResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
-frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
