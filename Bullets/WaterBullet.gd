@@ -9,7 +9,7 @@ export var damage = 20
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	$Timer.start() # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -23,3 +23,7 @@ func _on_WaterBullet_body_entered(body):
 
 func _on_VisibilityNotifier2D_screen_exited():
 	queue_free()
+
+
+func _on_Timer_timeout():
+	queue_free() # Replace with function body.

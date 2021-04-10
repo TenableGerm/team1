@@ -24,7 +24,7 @@ script = ExtResource( 5 )
 rotation = 1.5708
 scale = Vector2( 1.5, 2 )
 frames = SubResource( 1 )
-frame = 2
+frame = 1
 
 [node name="CollisionShape2D" parent="." index="1"]
 position = Vector2( 0.276806, -0.349105 )
@@ -35,6 +35,7 @@ position = Vector2( 0.315332, -0.630675 )
 scale = Vector2( 1.45198, 1.69374 )
 
 [node name="Timer" type="Timer" parent="." index="3"]
+wait_time = 0.5
 one_shot = true
 [connection signal="body_entered" from="." to="." method="_on_FireBullet_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

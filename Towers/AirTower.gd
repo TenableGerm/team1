@@ -19,13 +19,21 @@ func _ready():
 
 
 func shoot():
+	var a = AirBullet.instance()
 	var b = AirBullet.instance()
 	#b.volocity = Vector2(1,1)
-	b.rotation_degrees = oriantation
-	oriantation += 10
-	oriantation % 360
-	add_child(b)
-	b.get_node("AnimatedSprite").flip_h = true
+	var enemy = get_tree().get_nodes_in_group("enemy")
+	if enemy.size() > 0:
+		a.rotation_degrees = 180 + oriantation
+		add_child(a)
+		a.get_node("AnimatedSprite").flip_h = true
+		b.rotation_degrees = oriantation
+		oriantation += 10
+		oriantation % 360
+		add_child(b)
+		b.get_node("AnimatedSprite").flip_h = true
+	else:
+		pass
 	#b.transform = $Fire.global_transform
 
 
