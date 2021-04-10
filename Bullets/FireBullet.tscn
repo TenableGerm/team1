@@ -1,0 +1,32 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Bullets/WaterBullet.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Bullets/FireBullet/FireBullet2.png" type="Texture" id=2]
+[ext_resource path="res://Bullets/FireBullet/FireBullet1.png" type="Texture" id=3]
+[ext_resource path="res://Bullets/FireBullet/FireBullet0.png" type="Texture" id=4]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 4 ), ExtResource( 3 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 15.6328, 15.9459 )
+
+[node name="FireBullet" instance=ExtResource( 1 )]
+
+[node name="AnimatedSprite" parent="." index="0"]
+frames = SubResource( 1 )
+frame = 1
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2( 0.276806, -0.349105 )
+shape = SubResource( 2 )
+
+[node name="VisibilityNotifier2D" parent="." index="2"]
+position = Vector2( 0.315332, -0.630675 )
+scale = Vector2( 1.45198, 1.69374 )
+[connection signal="body_entered" from="." to="." method="_on_FireBullet_body_entered"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Bullets/BlueBullet.gd" type="Script" id=1]
+[ext_resource path="res://Bullets/WaterBullet.gd" type="Script" id=1]
 [ext_resource path="res://Bullets/WaterBullet/WaterBullet0.png" type="Texture" id=2]
 [ext_resource path="res://Bullets/WaterBullet/WaterBullet1.png" type="Texture" id=3]
 
