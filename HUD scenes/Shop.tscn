@@ -42,10 +42,8 @@ script = ExtResource( 2 )
 anchor_left = 0.693
 anchor_right = 1.0
 anchor_bottom = 0.842
-margin_left = 1.36798
-margin_top = 3.0
-margin_right = -1.0
-margin_bottom = -6.65601
+margin_left = 2.36798
+margin_bottom = -9.65601
 color = Color( 0.388235, 0.388235, 0.388235, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -152,9 +150,24 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Button" type="Button" parent="."]
+anchor_left = 0.797
+anchor_top = 0.365
+anchor_right = 0.906
+anchor_bottom = 0.406
+margin_left = -5.12805
+margin_top = -0.320007
+margin_right = 0.255981
+margin_bottom = 0.191986
+text = "Deselect"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="ShopInfo" parent="." instance=ExtResource( 1 )]
 [connection signal="pressed" from="Tower1" to="." method="_on_Tower1_pressed"]
 [connection signal="pressed" from="Tower2" to="." method="_on_Tower2_pressed"]
 [connection signal="pressed" from="Tower3" to="." method="_on_Tower3_pressed"]
 [connection signal="pressed" from="Tower4" to="." method="_on_Tower4_pressed"]
 [connection signal="pressed" from="Tower5" to="." method="_on_Tower5_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]

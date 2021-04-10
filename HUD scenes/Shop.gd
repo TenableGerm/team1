@@ -54,3 +54,11 @@ func _on_Tower5_pressed():
 	$ShopInfo/Cost.text = "Tower5 cost"
 	$ShopInfo/Tower.play("Red")
 	selected = "Red"
+
+
+func _on_Button_pressed():
+	$ShopInfo/Name.text = ""
+	$ShopInfo/Description.text = ""
+	$ShopInfo/Cost.text = ""
+	$ShopInfo/Tower.play("PlaceHold")
+	selected = "Des"

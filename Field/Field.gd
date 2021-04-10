@@ -2,9 +2,10 @@ extends CanvasLayer
 
 export (PackedScene) var Path
 export (PackedScene) var Tower  
-
 export (PackedScene) var FireTower 
 export (PackedScene) var AirTower 
+export (PackedScene) var EarthTower 
+export (PackedScene) var LightningTower 
 
 
 const grid_width =22
@@ -29,19 +30,29 @@ func _input(event):
 			var map_cords = $TileMap.world_to_map(mouse)
 			if 0 == $TileMap.get_cellv(map_cords):
 				var tower_type = FireTower
+				var tower_cost
+				if $Shop.selected == "Des":
+					tower_type = 0
 				if $Shop.selected == "Red":
-					get_node("MoneyLabel").cash = get_node("MoneyLabel").cash - FIRE_COST
+					tower_cost = FIRE_COST
 					tower_type = FireTower
 				if $Shop.selected == "Blue":
-					get_node("MoneyLabel").cash = get_node("MoneyLabel").cash - WATER_COST
+					tower_cost =  WATER_COST
 					tower_type = Tower
 				if $Shop.selected == "Grey":
-					get_node("MoneyLabel").cash = get_node("MoneyLabel").cash - AIR_COST
+					tower_cost =  AIR_COST
 					tower_type = AirTower
-				
-				var tower = tower_type.instance()
-				tower.position = mouse
-				add_child(tower)
+				if $Shop.selected == "Yellow":
+					tower_cost =  LIGHTNING_COST
+					tower_type = LightningTower
+				if $Shop.selected == "Brown":
+					tower_cost =  EARTH_COST
+					tower_type = EarthTower
+				if $Shop.selected != "Des" and get_node("MoneyLabel").cash >= tower_cost:
+					get_node("MoneyLabel").cash = get_node("MoneyLabel").cash - tower_cost
+					var tower = tower_type.instance()
+					tower.position = mouse
+					add_child(tower)
 
 
 func _on_EnemyButton_pressed():

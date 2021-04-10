@@ -14,7 +14,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
-	pass
+	position += transform.x * speed * delta
 
 
 func _on_LightningBullet_body_entered(body):
