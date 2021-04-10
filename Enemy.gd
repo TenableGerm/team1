@@ -1,6 +1,9 @@
 extends RigidBody2D
 
 onready var path_follow = get_parent()
+const FINISH_Y = 648
+
+signal damage
 
 export var min_speed = 15
 export var max_speed = 130
@@ -22,4 +25,10 @@ func MovementLoop(delta):
 	var prepos = path_follow.get_global_position()
 	path_follow.set_offset(path_follow.get_offset() + speed * delta)
 	var pos = path_follow.get_global_position()
+	if pos.y > FINISH_Y:
+		FinishLine()
+
+func FinishLine():
+	emit_signal("damage")
+	queue_free()
 
