@@ -4,110 +4,137 @@
 [ext_resource path="res://HUD scenes/Shop.gd" type="Script" id=2]
 [ext_resource path="res://Assets/Fonts/Kenney Pixel.ttf" type="DynamicFontData" id=3]
 
-[sub_resource type="StyleBoxFlat" id=1]
-bg_color = Color( 0.996078, 0.0823529, 0.0117647, 1 )
-
-[sub_resource type="DynamicFont" id=2]
-font_data = ExtResource( 3 )
-
-[sub_resource type="StyleBoxFlat" id=3]
-bg_color = Color( 0.054902, 0, 1, 1 )
-
-[sub_resource type="StyleBoxFlat" id=4]
-bg_color = Color( 0.921569, 1, 0, 1 )
-
-[sub_resource type="StyleBoxFlat" id=5]
-
-[sub_resource type="StyleBoxFlat" id=6]
-bg_color = Color( 0.533333, 0.243137, 0.243137, 1 )
-
-[sub_resource type="DynamicFontData" id=7]
+[sub_resource type="DynamicFontData" id=9]
 font_path = "res://Assets/Fonts/Kenney Pixel.ttf"
 
-[sub_resource type="DynamicFont" id=8]
+[sub_resource type="DynamicFont" id=10]
 size = 60
-font_data = SubResource( 7 )
+outline_size = 2
+outline_color = Color( 0, 0, 0, 1 )
+font_data = SubResource( 9 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.996078, 0.0823529, 0.0117647, 1 )
+
+[sub_resource type="DynamicFont" id=4]
+font_data = ExtResource( 3 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.054902, 0, 1, 1 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.921569, 1, 0, 1 )
+
+[sub_resource type="StyleBoxFlat" id=7]
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 0.533333, 0.243137, 0.243137, 1 )
 
 [node name="Shop" type="CanvasLayer"]
 script = ExtResource( 2 )
 
-[node name="ColorRect" type="ColorRect" parent="."]
-anchor_left = 1.0
+[node name="ShopBoxRect" type="ColorRect" parent="."]
+anchor_left = 0.693
 anchor_right = 1.0
-margin_left = -314.0
-margin_bottom = 504.0
+anchor_bottom = 0.842
+margin_left = 0.367981
+margin_top = 1.25992
+margin_bottom = 0.0598755
 color = Color( 0.345098, 0.235294, 0.235294, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="ShopName" type="RichTextLabel" parent="ShopBoxRect"]
+anchor_right = 1.0
+anchor_bottom = 0.123
+margin_left = 25.8252
+margin_right = -28.1748
+margin_bottom = 0.00800323
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/normal_font = SubResource( 10 )
+text = "Element Shop"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Tower1" type="Button" parent="."]
-margin_left = 789.693
-margin_top = 94.8985
-margin_right = 819.693
-margin_bottom = 124.898
-custom_styles/normal = SubResource( 1 )
-custom_fonts/font = SubResource( 2 )
+anchor_left = 0.771
+anchor_top = 0.158
+anchor_right = 0.8
+anchor_bottom = 0.208
+margin_left = -1.39844
+margin_top = 0.0984955
+margin_right = -1.09442
+margin_bottom = 0.0979996
+custom_styles/normal = SubResource( 3 )
+custom_fonts/font = SubResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Tower2" type="Button" parent="."]
-margin_left = 839.693
-margin_top = 94.8985
-margin_right = 869.693
-margin_bottom = 124.898
-custom_styles/normal = SubResource( 3 )
-custom_fonts/font = SubResource( 2 )
+anchor_left = 0.82
+anchor_top = 0.158
+anchor_right = 0.849
+anchor_bottom = 0.208
+margin_left = 0.0129395
+margin_top = 0.0984955
+margin_right = 0.316956
+margin_bottom = 0.0979996
+custom_styles/normal = SubResource( 5 )
+custom_fonts/font = SubResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Tower3" type="Button" parent="."]
-margin_left = 889.693
-margin_top = 94.8985
-margin_right = 919.693
-margin_bottom = 124.898
-custom_styles/normal = SubResource( 4 )
-custom_fonts/font = SubResource( 2 )
+anchor_left = 0.869
+anchor_top = 0.158
+anchor_right = 0.898
+anchor_bottom = 0.208
+margin_left = -1.75043
+margin_top = 0.0984955
+margin_right = -1.44647
+margin_bottom = 0.0979996
+custom_styles/normal = SubResource( 6 )
+custom_fonts/font = SubResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Tower4" type="Button" parent="."]
-margin_left = 809.693
-margin_top = 144.898
-margin_right = 839.693
-margin_bottom = 174.898
-custom_styles/normal = SubResource( 5 )
-custom_fonts/font = SubResource( 2 )
+anchor_left = 0.791
+anchor_top = 0.241
+anchor_right = 0.82
+anchor_bottom = 0.291
+margin_left = -1.87842
+margin_top = -1.28941
+margin_right = -1.57446
+margin_bottom = -1.28941
+custom_styles/normal = SubResource( 7 )
+custom_fonts/font = SubResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Tower5" type="Button" parent="."]
-margin_left = 869.693
-margin_top = 144.898
-margin_right = 899.693
-margin_bottom = 174.898
-custom_styles/normal = SubResource( 6 )
-custom_fonts/font = SubResource( 2 )
+anchor_left = 0.849
+anchor_top = 0.241
+anchor_right = 0.879
+anchor_bottom = 0.291
+margin_left = 0.316956
+margin_top = 0.297989
+margin_right = -0.403076
+margin_bottom = 0.297989
+custom_styles/normal = SubResource( 8 )
+custom_fonts/font = SubResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="ShopInfo" parent="." instance=ExtResource( 1 )]
-
-[node name="Label" type="Label" parent="."]
-margin_left = 731.41
-margin_top = 17.4095
-margin_right = 1019.41
-margin_bottom = 63.4095
-custom_fonts/font = SubResource( 8 )
-text = "Ye Olde Shoppe"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 [connection signal="pressed" from="Tower1" to="." method="_on_Tower1_pressed"]
 [connection signal="pressed" from="Tower2" to="." method="_on_Tower2_pressed"]
 [connection signal="pressed" from="Tower3" to="." method="_on_Tower3_pressed"]

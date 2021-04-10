@@ -1,6 +1,3 @@
-[gd_scene load_steps=4 format=2]
-
-[ext_resource path="res://Field/medTS.tres" type="TileSet" id=1]
 [ext_resource path="res://Assets/Towers/BrownTower0.png" type="Texture" id=2]
 
 [sub_resource type="TileSet" id=1]
@@ -18,8 +15,14 @@
 0/shape_one_way_margin = 0.0
 0/shapes = [  ]
 0/z_index = 0
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Field/medTS.tres" type="TileSet" id=1]
+[ext_resource path="res://HUD scenes/Shop.tscn" type="PackedScene" id=2]
 
 [node name="Field" type="Node"]
+
+[node name="Shop" parent="." instance=ExtResource( 2 )]
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 1 )
