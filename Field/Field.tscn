@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Field/medTS.tres" type="TileSet" id=1]
 [ext_resource path="res://HUD scenes/Shop.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Path2D.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Tower.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Field/Pollution.gd" type="Script" id=6]
+[ext_resource path="res://Field/PollutionBar.gd" type="Script" id=7]
 
 [sub_resource type="DynamicFontData" id=1]
 font_path = "res://Assets/Fonts/Kenney Pixel.ttf"
@@ -13,6 +14,16 @@ font_path = "res://Assets/Fonts/Kenney Pixel.ttf"
 [sub_resource type="DynamicFont" id=2]
 size = 50
 font_data = SubResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.592157, 0.376471, 0.0941176, 1 )
+
+[sub_resource type="DynamicFontData" id=4]
+font_path = "res://Assets/Fonts/Kenney Pixel.ttf"
+
+[sub_resource type="DynamicFont" id=5]
+size = 40
+font_data = SubResource( 4 )
 
 [node name="Field" type="CanvasLayer"]
 script = ExtResource( 3 )
@@ -47,8 +58,17 @@ margin_top = 680.0
 margin_right = 236.0
 margin_bottom = 728.0
 custom_fonts/font = SubResource( 2 )
-text = "Status"
 script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PollutionBar" type="ProgressBar" parent="Pollution"]
+margin_right = 252.0
+margin_bottom = 46.0
+custom_styles/bg = SubResource( 3 )
+custom_fonts/font = SubResource( 5 )
+script = ExtResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
