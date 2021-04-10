@@ -7,7 +7,9 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 20.9732, 21.759 )
 
-[node name="Tower" type="Area2D"]
+[node name="Tower" type="Area2D" groups=[
+"towers",
+]]
 script = ExtResource( 1 )
 WaterBullet = ExtResource( 3 )
 
