@@ -4,11 +4,16 @@
 [ext_resource path="res://HUD scenes/Shop.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Field/Field.gd" type="Script" id=3]
 [ext_resource path="res://Path2D.tscn" type="PackedScene" id=4]
+<<<<<<< HEAD
 [ext_resource path="res://Field/Pollution.gd" type="Script" id=5]
+=======
+[ext_resource path="res://Tower.tscn" type="PackedScene" id=5]
+>>>>>>> 2a67eb5e036cc2d4e89707a670cfec830d6d131d
 
 [node name="Field" type="CanvasLayer"]
 script = ExtResource( 3 )
 Path = ExtResource( 4 )
+Tower = ExtResource( 5 )
 
 [node name="Shop" parent="." instance=ExtResource( 2 )]
 
