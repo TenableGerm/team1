@@ -13,6 +13,7 @@ func game_over():
 	$DeathMessage1.show()
 	$DeathMessage2.show()
 	$ExitButton.show()
+	get_parent().get_node("Field").queue_free()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
