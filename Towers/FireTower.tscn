@@ -12,4 +12,4 @@ FireBullet = ExtResource( 2 )
 animation = "Red"
 
 [node name="Timer" parent="." index="3"]
-wait_time = 2.0
+wait_time = 0.3

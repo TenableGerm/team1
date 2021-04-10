@@ -21,12 +21,23 @@ func _ready():
 func shoot():
 	var b = FireBullet.instance()
 	#b.volocity = Vector2(1,1)
-	b.rotation_degrees = oriantation
-	oriantation += 90
-	oriantation % 360
-	b.position += b.transform.x * 50
-	add_child(b)
-	b.get_node("AnimatedSprite").flip_h = true
+	#b.rotation_degrees = oriantation
+	#oriantation += 90
+	#oriantation % 360
+	var enemy = get_tree().get_nodes_in_group("enemy")
+	if enemy.size() > 0:
+		var current = enemy[0]
+		var minDist = $Fire.global_position.distance_to(enemy[0].global_position)
+		for x in enemy:
+			if minDist > $Fire.global_position.distance_to(x.global_position):
+				minDist = $Fire.global_position.distance_to(x.global_position)
+				current = x
+		b.rotation = PI + $Fire.global_position.angle_to_point(current.global_position)
+		b.position += b.transform.x * 50
+		add_child(b)
+		b.get_node("AnimatedSprite").flip_h = true
+	else:
+		pass
 	#b.transform = $Fire.global_transform
 
 

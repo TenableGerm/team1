@@ -18,8 +18,7 @@ func _physics_process(delta):
 
 
 func _on_EarthBullet_body_entered(body):
-	body._enemy_damage(9)
-	queue_free()
+	body._enemy_damage(10)
 
 func _on_VisibilityNotifier2D_screen_exited():
 	queue_free()
