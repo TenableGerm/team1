@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Towers/EarthTower.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Towers/LightningTower.gd" type="Script" id=2]
+[ext_resource path="res://Bullets/LightningBullet.tscn" type="PackedScene" id=3]
+
+[node name="LightningTower" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+LightningBullet = ExtResource( 3 )
+
+[node name="TowerAnim" parent="." index="1"]
+animation = "Yellow"
+
+[node name="Timer" parent="." index="3"]
+wait_time = 0.005
