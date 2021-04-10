@@ -14,8 +14,8 @@ var started = false
 var round_num = 0
 
 var FIRE_COST = 150.0
-var WATER_COST = 130.0
-var LIGHTNING_COST = 90.0
+var WATER_COST = 105.0
+var LIGHTNING_COST = 75.0
 var EARTH_COST = 60.0
 var AIR_COST = 55.0
 
