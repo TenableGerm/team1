@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://Assets/Tres/Terrain2.tres" type="TileSet" id=1]
 [ext_resource path="res://HUD scenes/Shop.tscn" type="PackedScene" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://Towers/AirTower.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Towers/LightningTower.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Assets/Tres/Terrain1.tres" type="TileSet" id=13]
+[ext_resource path="res://Assets/Wood-Boards-Texture.jpg" type="Texture" id=14]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 1, 0, 0, 1 )
@@ -73,6 +74,17 @@ FireTower = ExtResource( 8 )
 AirTower = ExtResource( 11 )
 EarthTower = ExtResource( 10 )
 LightningTower = ExtResource( 12 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 116.0
+margin_bottom = 13.0
+rect_scale = Vector2( 1, 1.1 )
+texture = ExtResource( 14 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Shop" parent="." instance=ExtResource( 2 )]
 

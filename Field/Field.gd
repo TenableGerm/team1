@@ -13,10 +13,10 @@ const grid_hight =20
 var started = false
 
 const FIRE_COST = 20
-const WATER_COST = 15
+const WATER_COST = 30
 const LIGHTNING_COST = 22
-const EARTH_COST = 8
-const AIR_COST = 100
+const EARTH_COST = 36
+const AIR_COST = 75
 
 const TILE_TYPE = 3
 
