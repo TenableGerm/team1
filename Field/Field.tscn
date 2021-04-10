@@ -106,7 +106,7 @@ __meta__ = {
 [node name="Shop" parent="." instance=ExtResource( 2 )]
 
 [node name="EnemyTimer" type="Timer" parent="."]
-wait_time = 3.0
+wait_time = 2.0
 
 [node name="EnemyButton" type="Button" parent="."]
 margin_left = 554.0
@@ -173,6 +173,7 @@ format = 1
 tile_data = PoolIntArray( 6, 2, 0, 131073, 2, 0, 131080, 2, 0, 262146, 2, 0, 327688, 2, 0, 393217, 2, 0, 524291, 2, 0 )
 
 [node name="RoundTimer" type="Timer" parent="."]
+wait_time = 10.0
 one_shot = true
 script = ExtResource( 15 )
 
@@ -218,6 +219,7 @@ autowrap = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+[connection signal="timeout" from="EnemyTimer" to="." method="_on_EnemyTimer_timeout"]
 [connection signal="pressed" from="EnemyButton" to="." method="_on_EnemyButton_pressed"]
 [connection signal="pressed" from="QuitButton" to="." method="_on_QuitButton_pressed"]
 [connection signal="timeout" from="RoundTimer" to="EnemyButton" method="_on_RoundTimer_timeout"]

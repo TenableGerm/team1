@@ -61,9 +61,10 @@ func _input(event):
 
 func _on_EnemyButton_pressed():
 	$RoundTimer.start()
+	$EnemyTimer.start()
 	$EnemyButton.Disappear()
 	new_round()
-	new_enemies(rand_range(4,6))
+	new_enemies(rand_range(1,2))
 
 func new_round():
 	round_num = round_num + 1
@@ -88,3 +89,7 @@ func money_up():
 
 func _on_QuitButton_pressed():
 	get_tree().quit()
+
+
+func _on_EnemyTimer_timeout():
+	new_enemies(rand_range(1,2))# Replace with function body.

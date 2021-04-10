@@ -17,4 +17,5 @@ func _on_RoundTimer_timeout():
 	self.show()
 	get_parent().get_node("MoneyLabel").cash = get_parent().get_node("MoneyLabel").cash + get_parent().round_num * 10
 	get_parent().money_up();
+	get_parent().get_node("EnemyTimer").stop()
 	get_parent().get_node("RoundTimer").stop()
