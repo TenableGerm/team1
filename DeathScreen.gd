@@ -9,7 +9,6 @@ func _ready():
 	$ExitButton.hide()
 
 func game_over():
-	print("Here 2")
 	$DeathBackground.show()
 	$DeathMessage1.show()
 	$DeathMessage2.show()

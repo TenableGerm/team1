@@ -16,7 +16,7 @@ var round_num = 0
 const FIRE_COST = 20
 const WATER_COST = 30
 const LIGHTNING_COST = 22
-const EARTH_COST = 36
+const EARTH_COST = 60
 const AIR_COST = 75
 
 const TILE_TYPE = 3
