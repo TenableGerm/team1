@@ -35,14 +35,15 @@ loop = false
 script = ExtResource( 3 )
 Enemy = ExtResource( 1 )
 
-[node name="Enemy" type="RigidBody2D" parent="PathFollow2D"]
+[node name="Enemy" type="RigidBody2D" parent="PathFollow2D" groups=[
+"enemy",
+]]
 collision_mask = 0
 gravity_scale = 0.0
 script = ExtResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="PathFollow2D/Enemy"]
 frames = SubResource( 2 )
-frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PathFollow2D/Enemy"]
