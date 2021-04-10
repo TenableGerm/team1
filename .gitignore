@@ -5,3 +5,6 @@ export_presets.cfg
 *.translation
 .mono/
 data_*/
+
+*.md5
+*.stex
