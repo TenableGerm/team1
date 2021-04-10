@@ -16,27 +16,18 @@ func _ready():
 
 
 func _input(event):
-	if event is InputEventMouseButton and event.is_pressed():
-		var mouse = get_viewport().get_mouse_position()
-		if $Shop.selected == "Blue":
-			var tower = Tower.instance()
-			tower.get_node("TowerAnim").play($Shop.selected)
-			tower.position = mouse
-			#tower.get_node("Fire").position = mouse
-			add_child(tower)
-		if $Shop.selected == "Red":
-			var tower = FireTower.instance()
-			tower.get_node("TowerAnim").play($Shop.selected)
-			tower.position = mouse
-			#tower.get_node("Fire").position = mouse
-			add_child(tower)
 	if started :
 		if event is InputEventMouseButton and event.is_pressed():
 			var mouse = get_viewport().get_mouse_position()
 			var map_cords = $TileMap.world_to_map(mouse)
-			if (0 < map_cords.x  && map_cords.x < grid_width
-			 && 0 < map_cords.y  && map_cords.y < grid_hight ):
-				var tower = Tower.instance()
+			if 0 == $TileMap.get_cellv(map_cords):
+				var tower_type = FireTower
+				if $Shop.selected == "Red":
+					tower_type = FireTower
+				if $Shop.selected == "Blue":
+					tower_type = Tower
+				
+				var tower = tower_type.instance()
 				tower.get_node("TowerAnim").play($Shop.selected)
 				tower.position = mouse
 				add_child(tower)
