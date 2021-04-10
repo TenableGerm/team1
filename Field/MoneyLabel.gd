@@ -11,10 +11,6 @@ func cash_up():
 	cash = cash + 8
 	
 func _process(delta):
-	text = "Cash: " + str(cash)
+	set_text("Cash: " + str(cash))
 	show()
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass

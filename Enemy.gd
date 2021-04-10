@@ -3,10 +3,11 @@ extends RigidBody2D
 onready var path_follow = get_parent()
 
 signal damage
+signal death
 
 export var max_health = 10
-export var min_speed = 200
-export var max_speed = 400
+export var min_speed = 50
+export var max_speed = 450
 var speed = 0
 var health = 0
 
@@ -29,13 +30,15 @@ func _physics_process(delta):
 	
 func _enemy_damage(amount):
 	health = health - amount
+	#if health <= 0:
+		#Death()
 
 func MovementLoop(delta):
 	var prepos = path_follow.get_global_position()
 	path_follow.set_offset(path_follow.get_offset() + speed * delta)
 	var pos = path_follow.get_global_position()
 	if (health < 1):
-		queue_free()
+		Death()
 	if pos.y > FINISH_Y:
 		FinishLine()
 
@@ -44,5 +47,6 @@ func FinishLine():
 	queue_free()
 
 func Death():
+	health = 0
 	emit_signal("death")
 	queue_free()
