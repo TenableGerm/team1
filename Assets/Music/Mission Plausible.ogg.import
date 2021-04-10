@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Mission Plausible.ogg-2959ca24f100a0a2f6b48853256245d7.oggstr"
+
+[deps]
+
+source_file="res://Assets/Music/Mission Plausible.ogg"
+dest_files=[ "res://.import/Mission Plausible.ogg-2959ca24f100a0a2f6b48853256245d7.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

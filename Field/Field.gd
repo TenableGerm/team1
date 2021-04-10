@@ -54,12 +54,11 @@ func _input(event):
 					tower.position = mouse
 					add_child(tower)
 
-
 func _on_EnemyButton_pressed():
 	new_enemies(rand_range(10,50))
 
 func new_enemies(num):
-	for i in range(num):
+	for _i in range(num):
 		var path = Path.instance()
 		add_child(path)
 
