@@ -11,6 +11,7 @@ export (PackedScene) var LightningTower
 const grid_width =22
 const grid_hight =20
 var started = false
+var round_num = 0
 
 const FIRE_COST = 20
 const WATER_COST = 30
@@ -58,10 +59,17 @@ func _input(event):
 					add_child(tower)
 
 func _on_EnemyButton_pressed():
-	new_enemies(rand_range(10,50))
+	new_round()
+	new_enemies(rand_range(1,10))
+	
+
+func new_round():
+	round_num = round_num + 1
+	$RoundLabel.text = "Round:" + String(round_num)
+	$RoundLabel.show()
 
 func new_enemies(num):
-	for _i in range(num):
+	for i in range(num*round_num):
 		var path = Path.instance()
 		add_child(path)
 
