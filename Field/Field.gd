@@ -38,17 +38,15 @@ func _input(event):
 				if $Shop.selected == "Grey":
 					get_node("MoneyLabel").cash = get_node("MoneyLabel").cash - AIR_COST
 					tower_type = AirTower
-				
 				var tower = tower_type.instance()
 				tower.position = mouse
 				add_child(tower)
-
 
 func _on_EnemyButton_pressed():
 	new_enemies(rand_range(10,50))
 
 func new_enemies(num):
-	for i in range(num):
+	for _i in range(num):
 		var path = Path.instance()
 		add_child(path)
 
