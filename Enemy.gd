@@ -20,6 +20,7 @@ func _ready():
 	$AnimatedSprite.animation = mob_types[randi() % mob_types.size()]
 	speed = rand_range(min_speed,max_speed)
 	connect("damage",get_parent().get_parent().get_parent().get_node("Pollution"),"pollution_up")
+	connect("death", get_parent().get_parent().get_parent().get_node("MoneyLabel"), "cash_up")
 	health = max_health
 
 
@@ -42,3 +43,6 @@ func FinishLine():
 	emit_signal("damage")
 	queue_free()
 
+func Death():
+	emit_signal("death")
+	queue_free()
