@@ -21,5 +21,4 @@ func _on_PlayButton_pressed():
 
 
 func _on_QuitButton_pressed():
-	pass
-	#get_tree.quit()
+	get_tree().quit()
