@@ -18,7 +18,7 @@ func _physics_process(delta):
 
 
 func _on_FireBullet_body_entered(body):
-	body._enemy_damage(100)
+	body._enemy_damage(10)
 	queue_free()
 
 func _on_VisibilityNotifier2D_screen_exited():

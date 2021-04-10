@@ -18,7 +18,7 @@ func _physics_process(delta):
 
 
 func _on_LightningBullet_body_entered(body):
-	body._enemy_damage(5)
+	body._enemy_damage(4)
 	queue_free()
 
 func _on_VisibilityNotifier2D_screen_exited():

@@ -13,11 +13,11 @@ const grid_hight =20
 var started = false
 var round_num = 0
 
-const FIRE_COST = 20
-const WATER_COST = 30
-const LIGHTNING_COST = 22
-const EARTH_COST = 60
-const AIR_COST = 75
+const FIRE_COST = 200
+const WATER_COST = 130
+const LIGHTNING_COST = 90
+const EARTH_COST = 75
+const AIR_COST = 55
 
 const TILE_TYPE = 3
 
