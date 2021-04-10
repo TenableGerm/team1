@@ -4,9 +4,11 @@ onready var path_follow = get_parent()
 
 signal damage
 
+export var max_health = 10
 export var min_speed = 200
 export var max_speed = 400
 var speed = 0
+var health = 0
 
 const FINISH_Y = 647
 
@@ -18,18 +20,21 @@ func _ready():
 	$AnimatedSprite.animation = mob_types[randi() % mob_types.size()]
 	speed = rand_range(min_speed,max_speed)
 	connect("damage",get_parent().get_parent().get_parent().get_node("Pollution"),"pollution_up")
+	health = max_health
 
 
 func _physics_process(delta):
 	MovementLoop(delta)
 	
 func _enemy_damage(amount):
-	queue_free()
+	health = health - amount
 
 func MovementLoop(delta):
 	var prepos = path_follow.get_global_position()
 	path_follow.set_offset(path_follow.get_offset() + speed * delta)
 	var pos = path_follow.get_global_position()
+	if (health < 1):
+		queue_free()
 	if pos.y > FINISH_Y:
 		FinishLine()
 
