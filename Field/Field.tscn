@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Field/medTS.tres" type="TileSet" id=1]
 [ext_resource path="res://HUD scenes/Shop.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Towers/Tower.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Field/Pollution.gd" type="Script" id=6]
 [ext_resource path="res://Field/PollutionBar.gd" type="Script" id=7]
+[ext_resource path="res://Towers/FireTower.tscn" type="PackedScene" id=8]
 
 [sub_resource type="DynamicFontData" id=1]
 font_path = "res://Assets/Fonts/Kenney Pixel.ttf"
@@ -29,6 +30,7 @@ font_data = SubResource( 4 )
 script = ExtResource( 3 )
 Path = ExtResource( 4 )
 Tower = ExtResource( 5 )
+FireTower = ExtResource( 8 )
 
 [node name="Shop" parent="." instance=ExtResource( 2 )]
 
